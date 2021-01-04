@@ -53,7 +53,7 @@ export interface ASTNode {
   type: string;
   sourceType: string; // original source token name
   sourceInfo: string;
-  sourceMeta: string | null;
+  sourceMeta: any;
   key: string;
   content: string;
   markup: string;
