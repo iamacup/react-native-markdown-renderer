@@ -30,7 +30,7 @@
   "homepage": "https://github.com/iamacup/react-native-markdown-display/",
   "dependencies": {
     "css-to-react-native": "^3.0.0",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^13.0.0",
     "prop-types": "^15.7.2",
     "react-native-fit-image": "^1.5.5"
   },
@@ -39,15 +39,17 @@
     "react-native": "^0.65.1"
   },
   "devDependencies": {
-    "@types/markdown-it": "^12.2.1",
-    "@types/react-native": "^0.64.13",
     "@babel/core": "^7.15.0",
     "@babel/runtime": "^7.15.3",
     "@react-native-community/eslint-config": "^3.0.0",
+    "@types/markdown-it": "^12.2.1",
+    "@types/react-native": "^0.64.13",
     "@typescript-eslint/parser": "^4.29.3",
     "eslint": "^7.32.0",
-    "json-schema": "^0.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "json-schema": "^0.4.0",
     "pre-commit": "^1.2.2",
+    "prettier": "^2.6.2",
     "typescript": "^4.4.2"
   }
 }
