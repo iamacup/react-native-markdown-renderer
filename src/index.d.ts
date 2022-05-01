@@ -62,6 +62,7 @@ export interface ASTNode {
 }
 
 export class AstRenderer {
+  // eslint-disable-next-line no-shadow
   constructor(renderRules: RenderRules, style?: any);
   getRenderFunction(type: string): RenderFunction;
   renderNode(node: any, parentNodes: ReadonlyArray<any>): ReactNode;
@@ -71,6 +72,7 @@ export class AstRenderer {
 export function parser(
   source: string,
   renderer: (node: ASTNode) => View,
+  // eslint-disable-next-line no-shadow
   parser: MarkdownParser,
 ): any;
 
