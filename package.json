@@ -35,8 +35,8 @@
     "react-native-fit-image": "^1.5.5"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-native": ">=0.65.1"
+    "react": "^17 || ^18",
+    "react-native": ">=0.50.4"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
