@@ -25,7 +25,7 @@ export function cleanupTokens(tokens) {
    * nested non text tokens breaks component
    */
   const stack = [];
-  tokens = tokens.reduce((acc, token, index) => {
+  tokens = tokens.reduce((acc, token) => {
     if (token.type === 'link' && token.nesting === 1) {
       stack.push(token);
     } else if (

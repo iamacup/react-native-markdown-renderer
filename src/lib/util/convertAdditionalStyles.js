@@ -19,7 +19,5 @@ export default function convertAdditionalStyles(style) {
       return x != null;
     });
 
-  const conv = cssToReactNative(tuples);
-
-  return conv;
+  return cssToReactNative(tuples);
 }

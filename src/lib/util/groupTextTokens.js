@@ -5,7 +5,7 @@ export default function groupTextTokens(tokens) {
 
   let hasGroup = false;
 
-  tokens.forEach((token, index) => {
+  tokens.forEach((token) => {
     if (!token.block && !hasGroup) {
       hasGroup = true;
       result.push(new Token('textgroup', 1));
