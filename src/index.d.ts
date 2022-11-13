@@ -89,6 +89,7 @@ export interface MarkdownProps {
   mergeStyle?: boolean;
   debugPrintTree?: boolean;
   onLinkPress?: (url: string) => boolean;
+  children: string;
 }
 
 type MarkdownStatic = ComponentType<MarkdownProps>;

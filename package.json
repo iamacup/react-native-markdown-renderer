@@ -35,17 +35,21 @@
     "react-native-fit-image": "^1.5.5"
   },
   "peerDependencies": {
-    "react": "^16.2.0",
+    "react": ">=16.2.0",
     "react-native": ">=0.50.4"
   },
   "devDependencies": {
-    "@types/markdown-it": "^10.0.1",
-    "@types/react-native": ">=0.50.0",
     "@babel/core": "^7.9.6",
     "@babel/runtime": "^7.9.6",
     "@react-native-community/eslint-config": "^1.1.0",
-    "@typescript-eslint/parser": "^2.32.0",
-    "eslint": "^7.0.0",
+    "@types/markdown-it": "^10.0.1",
+    "@types/react-native": ">=0.50.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": ">=2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0",
     "json-schema": "^0.2.5",
     "pre-commit": "1.2.2",
     "typescript": "^3.8.3"
