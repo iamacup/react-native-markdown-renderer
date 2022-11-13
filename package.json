@@ -1,18 +1,19 @@
 {
-  "name": "react-native-markdown-display",
+  "name": "react-native-markdown-display-updated",
   "version": "7.0.0-alpha.2",
-  "description": "Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
+  "description": "My fork of react-native-markdown-display which forks X-renderer.  Forked to get it into react v17.  Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --fix --cache ./src"
+    "lint": "./node_modules/.bin/eslint --fix --cache ./src",
+    "release": "release-it"
   },
   "pre-commit": [
     "lint"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamacup/react-native-markdown-display.git"
+    "url": "git+https://github.com/willmac321/react-native-markdown-display.git"
   },
   "keywords": [
     "react",
@@ -22,12 +23,12 @@
     "commonmark",
     "markdown-it"
   ],
-  "author": "Mient-jan Stelling and Tom Pickard + others from the community",
+  "author": "Will MacIntyre (this fork only) and Mient-jan Stelling and Tom Pickard + others from the community",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamacup/react-native-markdown-display/issues"
+    "url": "https://github.com/willmac321/react-native-markdown-display/issues"
   },
-  "homepage": "https://github.com/iamacup/react-native-markdown-display/",
+  "homepage": "https://github.com/willmac321/react-native-markdown-display/",
   "dependencies": {
     "css-to-react-native": "^3.0.0",
     "markdown-it": "^10.0.0",
@@ -52,6 +53,12 @@
     "eslint-plugin-react-native": "^4.0.0",
     "json-schema": "^0.2.5",
     "pre-commit": "1.2.2",
+    "release-it": "^15.5.0",
     "typescript": "^3.8.3"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
   }
 }
