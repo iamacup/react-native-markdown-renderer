@@ -1,6 +1,6 @@
 {
   "name": "react-native-markdown-display-updated",
-  "version": "7.0.0-alpha.2",
+  "version": "7.0.0",
   "description": "My fork of react-native-markdown-display which forks X-renderer.  Forked to get it into react v17.  Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
   "main": "src/index.js",
   "types": "src/index.d.ts",
