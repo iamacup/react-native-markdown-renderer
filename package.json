@@ -1,18 +1,19 @@
 {
-  "name": "react-native-markdown-display",
-  "version": "7.0.0-alpha.2",
-  "description": "Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
+  "name": "react-native-markdown-display-updated",
+  "version": "7.0.0",
+  "description": "My fork of react-native-markdown-display which forks X-renderer.  Forked to get it into react v17.  Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --fix --cache ./src"
+    "lint": "./node_modules/.bin/eslint --fix --cache ./src",
+    "release": "release-it"
   },
   "pre-commit": [
     "lint"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamacup/react-native-markdown-display.git"
+    "url": "git+https://github.com/willmac321/react-native-markdown-display.git"
   },
   "keywords": [
     "react",
@@ -22,12 +23,12 @@
     "commonmark",
     "markdown-it"
   ],
-  "author": "Mient-jan Stelling and Tom Pickard + others from the community",
+  "author": "Will MacIntyre (this fork only) and Mient-jan Stelling and Tom Pickard + others from the community",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamacup/react-native-markdown-display/issues"
+    "url": "https://github.com/willmac321/react-native-markdown-display/issues"
   },
-  "homepage": "https://github.com/iamacup/react-native-markdown-display/",
+  "homepage": "https://github.com/willmac321/react-native-markdown-display/",
   "dependencies": {
     "css-to-react-native": "^3.0.0",
     "markdown-it": "^10.0.0",
@@ -35,19 +36,29 @@
     "react-native-fit-image": "^1.5.5"
   },
   "peerDependencies": {
-    "react": "^16.2.0",
+    "react": ">=16.2.0",
     "react-native": ">=0.50.4"
   },
   "devDependencies": {
-    "@types/markdown-it": "^10.0.1",
-    "@types/react-native": ">=0.50.0",
     "@babel/core": "^7.9.6",
     "@babel/runtime": "^7.9.6",
     "@react-native-community/eslint-config": "^1.1.0",
-    "@typescript-eslint/parser": "^2.32.0",
-    "eslint": "^7.0.0",
+    "@types/markdown-it": "^10.0.1",
+    "@types/react-native": ">=0.50.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": ">=2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0",
     "json-schema": "^0.2.5",
     "pre-commit": "1.2.2",
+    "release-it": "^15.5.0",
     "typescript": "^3.8.3"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
   }
 }
