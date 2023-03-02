@@ -122,7 +122,8 @@ const renderRules = (Text: Component) => ({
                             modifiedInheritedStylesObj,
                             styles.bullet_list_icon,
                         ]}
-                        accessible={false}>
+                        accessible={false}
+                    >
                         {Platform.select({
                             android: '\u2022',
                             ios: '\u00B7',
@@ -156,7 +157,8 @@ const renderRules = (Text: Component) => ({
                         style={[
                             modifiedInheritedStylesObj,
                             styles.ordered_list_icon,
-                        ]}>
+                        ]}
+                    >
                         {listItemNumber}
                         {node.markup}
                     </Text>
@@ -252,7 +254,8 @@ const renderRules = (Text: Component) => ({
         <Text
             key={node.key}
             style={styles.link}
-            onPress={() => openUrl(node.attributes.href, onLinkPress)}>
+            onPress={() => openUrl(node.attributes.href, onLinkPress)}
+        >
             {children}
         </Text>
     ),
@@ -260,7 +263,8 @@ const renderRules = (Text: Component) => ({
         <TouchableWithoutFeedback
             key={node.key}
             onPress={() => openUrl(node.attributes.href, onLinkPress)}
-            style={styles.blocklink}>
+            style={styles.blocklink}
+        >
             <View style={styles.image}>{children}</View>
         </TouchableWithoutFeedback>
     ),
