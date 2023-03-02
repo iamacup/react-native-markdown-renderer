@@ -5,6 +5,8 @@
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
+    "format": "prettier -w src",
+    "format-check": "prettier --check src",
     "lint": "eslint --cache ./src",
     "lint-fix": "eslint --fix --cache ./src"
   },
