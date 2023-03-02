@@ -22,4 +22,8 @@ jobs:
         run: npm run lint
         continue-on-error: true
 
-      # TODO: prettier/format checks, type checks...
+      - name: Run Prettier
+        run: npm run format-check
+        continue-on-error: true
+
+      # TODO: type checks...
