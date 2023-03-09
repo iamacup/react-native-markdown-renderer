@@ -1,25 +1,25 @@
 import cssToReactNative from 'css-to-react-native';
 
 export default function convertAdditionalStyles(style) {
-    const rules = style.split(';');
+  const rules = style.split(';');
 
-    const tuples = rules
-        .map((rule) => {
-            let [key, value] = rule.split(':');
+  const tuples = rules
+    .map((rule) => {
+      let [key, value] = rule.split(':');
 
-            if (key && value) {
-                key = key.trim();
-                value = value.trim();
-                return [key, value];
-            } else {
-                return null;
-            }
-        })
-        .filter((x) => {
-            return x != null;
-        });
+      if (key && value) {
+        key = key.trim();
+        value = value.trim();
+        return [key, value];
+      } else {
+        return null;
+      }
+    })
+    .filter((x) => {
+      return x != null;
+    });
 
-    const conv = cssToReactNative(tuples);
+  const conv = cssToReactNative(tuples);
 
-    return conv;
+  return conv;
 }

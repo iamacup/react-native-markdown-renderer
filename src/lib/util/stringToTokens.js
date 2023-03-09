@@ -1,10 +1,10 @@
 export function stringToTokens(source, markdownIt) {
-    let result = [];
-    try {
-        result = markdownIt.parse(source, {});
-    } catch (err) {
-        console.warn(err);
-    }
+  let result = [];
+  try {
+    result = markdownIt.parse(source, {});
+  } catch (err) {
+    console.warn(err);
+  }
 
-    return result;
+  return result;
 }
