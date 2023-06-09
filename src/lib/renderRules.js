@@ -127,9 +127,9 @@ const renderRules = {
             style={[modifiedInheritedStylesObj, styles.bullet_list_icon]}
             accessible={false}>
             {Platform.select({
-              android: '\u2022',
-              ios: '\u00B7',
-              default: '\u2022',
+              android: '•',
+              ios: '•',
+              default: '•',
             })}
           </Text>
           <View style={styles._VIEW_SAFE_bullet_list_content}>{children}</View>
