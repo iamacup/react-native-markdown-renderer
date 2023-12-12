@@ -53,7 +53,123 @@ const App: () => React$Node = () => {
 
 export default App;
 ```
+You can find this example [here](https://snack.expo.dev/@hassieb/react-native-markdown-display-ordered-list)
 
+This next example worked with `"react-native-markdown-display": "^7.0.0-alpha.2",` on React`18.1.0`, React Native `0.70.5` via the Expo command `npx create-expo-app --template` with typescript selected. 
+
+```jsx
+import React from "react";
+import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from "react-native";
+import { useTheme } from "@react-navigation/native";
+
+import Markdown from "react-native-markdown-display";
+
+const copy = `# h1 Heading 8-)
+
+**This is some bold text!**
+
+This is normal text
+`;
+
+const MarkdownWrapper: React.FC<any> = ({ children }) => {
+  const { colors } = useTheme();
+  // @ts-ignore
+  return <Markdown style={styles({ colors })}>{children}</Markdown>;
+};
+
+const App: () => React.ReactElement = () => {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={{ height: "100%" }}
+        >
+          <MarkdownWrapper>{copy}</MarkdownWrapper>
+        </ScrollView>
+      </SafeAreaView>
+    </>
+  );
+};
+
+export const styles = (props: any) =>
+  StyleSheet.create({
+    text: {
+      color: props.colors.text,
+    },
+  });
+
+export default App;
+```
+
+With text input 
+
+```jsx
+import React from "react";
+import {
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  TextInput,
+} from "react-native";
+import { useTheme } from "@react-navigation/native";
+
+import Markdown from "react-native-markdown-display";
+
+const copy = `# h1 Heading 8-)
+
+**This is some bold text!**
+
+This is normal text
+`;
+
+const MarkdownWrapper: React.FC<any> = ({ children }) => {
+  const { colors } = useTheme();
+  // @ts-ignore
+  return <Markdown style={styles({ colors })}>{children}</Markdown>;
+};
+
+const App: () => React.ReactElement = () => {
+  const [text, onChangeText] = React.useState(copy);
+  const { colors } = useTheme();
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={{ height: "100%" }}
+        >
+          <TextInput
+            multiline
+            style={{ ...styles({colors}).input, color: colors.text }}
+            onChangeText={onChangeText}
+            value={text}
+          />
+          <MarkdownWrapper>{text}</MarkdownWrapper>
+        </ScrollView>
+      </SafeAreaView>
+    </>
+  );
+};
+
+export const styles = (props: any) =>
+  StyleSheet.create({
+    text: {
+      color: props.colors.text,
+    },
+    input: {
+      height: 80,
+      margin: 12,
+      borderWidth: 1,
+      padding: 10,
+    },
+  });
+
+export default App;
+```
 
 ### Props and Functions
 
