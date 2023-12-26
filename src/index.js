@@ -152,7 +152,7 @@ const Markdown = React.memo(
     defaultImageHandler = 'https://',
     debugPrintTree = false,
   }) => {
-    const momoizedRenderer = useMemo(
+    const memoizedRenderer = useMemo(
       () =>
         getRenderer(
           renderer,
@@ -180,9 +180,9 @@ const Markdown = React.memo(
       ],
     );
 
-    const momoizedParser = useMemo(() => markdownit, [markdownit]);
+    const memoizedParser = useMemo(() => markdownit, [markdownit]);
 
-    return parser(children, momoizedRenderer.render, momoizedParser);
+    return parser(children, memoizedRenderer.render, memoizedParser);
   },
 );
 
