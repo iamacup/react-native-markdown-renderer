@@ -89,6 +89,12 @@ export interface MarkdownProps {
   mergeStyle?: boolean;
   debugPrintTree?: boolean;
   onLinkPress?: (url: string) => boolean;
+  maxTopLevelChildren?: number;
+  topLevelMaxExceededItem?:
+    | (() => React.ReactNode)
+    | JSX.Element
+    | (() => JSX.Element)
+    | ReactNode;
 }
 
 type MarkdownStatic = ComponentType<PropsWithChildren<MarkdownProps>>;
