@@ -30,7 +30,7 @@
   "homepage": "https://github.com/iamacup/react-native-markdown-display/",
   "dependencies": {
     "css-to-react-native": "^3.0.0",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^14.0.0",
     "prop-types": "^15.7.2",
     "react-native-fit-image": "^1.5.5"
   },
@@ -39,7 +39,7 @@
     "react-native": ">=0.50.4"
   },
   "devDependencies": {
-    "@types/markdown-it": "^10.0.1",
+    "@types/markdown-it": "^14.0.1",
     "@types/react-native": ">=0.50.0",
     "@babel/core": "^7.9.6",
     "@babel/runtime": "^7.9.6",
