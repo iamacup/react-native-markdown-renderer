@@ -1,6 +1,6 @@
 {
   "name": "@ronradtke/react-native-markdown-display",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "description": "Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
   "main": "src/index.js",
   "types": "src/index.d.ts",
