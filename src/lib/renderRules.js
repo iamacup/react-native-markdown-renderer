@@ -132,7 +132,15 @@ const renderRules = {
               default: '\u2022',
             })}
           </Text>
-          <View style={styles._VIEW_SAFE_bullet_list_content}>{children}</View>
+          {node.children.some((child) => child?.type === 'image') ? (
+            <Text style={styles._VIEW_SAFE_bullet_list_content}>
+              {children}
+            </Text>
+          ) : (
+            <View style={styles._VIEW_SAFE_bullet_list_content}>
+              {children}
+            </View>
+          )}
         </View>
       );
     }
@@ -157,7 +165,15 @@ const renderRules = {
             {listItemNumber}
             {node.markup}
           </Text>
-          <View style={styles._VIEW_SAFE_ordered_list_content}>{children}</View>
+          {node.children.some((child) => child?.type === 'image') ? (
+            <Text style={styles._VIEW_SAFE_ordered_list_content}>
+              {children}
+            </Text>
+          ) : (
+            <View style={styles._VIEW_SAFE_ordered_list_content}>
+              {children}
+            </View>
+          )}
         </View>
       );
     }
@@ -310,11 +326,20 @@ const renderRules = {
       {children}
     </Text>
   ),
-  paragraph: (node, children, parent, styles) => (
-    <View key={node.key} style={styles._VIEW_SAFE_paragraph}>
-      {children}
-    </View>
-  ),
+  paragraph: (node, children, parent, styles) => {
+    if (node.children.some((child) => child?.type === 'image'))
+      return (
+        <Text key={node.key} style={styles._VIEW_SAFE_paragraph}>
+          {children}
+        </Text>
+      );
+
+    return (
+      <View key={node.key} style={styles._VIEW_SAFE_paragraph}>
+        {children}
+      </View>
+    );
+  },
   hardbreak: (node, children, parent, styles) => (
     <Text key={node.key} style={styles.hardbreak}>
       {'\n'}

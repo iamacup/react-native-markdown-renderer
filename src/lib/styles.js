@@ -58,29 +58,34 @@ export const styles = {
   },
 
   // Lists
-  bullet_list: {},
-  ordered_list: {},
+  bullet_list: {
+    marginVertical: 4,
+  },
+  ordered_list: {
+    marginVertical: 4,
+  },
   list_item: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
+    paddingLeft: 18,
   },
   // @pseudo class, does not have a unique render rule
   bullet_list_icon: {
-    marginLeft: 10,
+    marginLeft: 0,
     marginRight: 10,
+    position: 'absolute',
   },
   // @pseudo class, does not have a unique render rule
   bullet_list_content: {
-    flex: 1,
+    flex: undefined /* TODO: https://github.com/iamacup/react-native-markdown-display/issues/218 */,
   },
   // @pseudo class, does not have a unique render rule
   ordered_list_icon: {
-    marginLeft: 10,
+    marginLeft: 0,
     marginRight: 10,
+    position: 'absolute',
   },
   // @pseudo class, does not have a unique render rule
   ordered_list_content: {
-    flex: 1,
+    flex: undefined /* TODO: https://github.com/iamacup/react-native-markdown-display/issues/218 */,
   },
 
   // Code
